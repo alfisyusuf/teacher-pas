@@ -55,7 +55,7 @@
 
 .event .event-right .event-timing {
   background: #fff8ba;
-  display: flex;
+  display: flexbox;
   align-items: center;
   justify-content: center;
   width: 100px;
