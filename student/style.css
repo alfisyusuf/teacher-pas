@@ -1,134 +1,76 @@
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap");
+/* Style Settings */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-html {
-  font-family: "Work Sans", sans-serif;
-  font-weight: 500;
-  text-align: center;
-}
 body {
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url(Doubs.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #371853;
+    background-image: url('background.png');
 }
 
-main {
-  background-color: rgb(255, 255, 255);
-  padding: 3rem;
-  border-radius: 8px;
-  box-shadow: 10px 10px rgb(118, 172, 241);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transition: all .5s ease;
+a {cursor: crosshair;}
+
+#userPhoto{
+    width: 96px;
+    height: 96px;
+    display: block;
+    margin: 35px auto 20px;
 }
 
-main:hover {
-  transform: translate(10px, 10px);
-  box-shadow: 0px 0px rgb(118, 172, 241);
+#userName{
+    color: #fff;
+    font-size: 1.5em;
+    line-height: 1.25;
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}
+#userName:hover{animation: blinker 1s infinite;}
+
+@keyframes blinker{
+    50%{
+        color: rgba(255,202,8,1);
+    }
 }
 
-main div {
-  margin-bottom: 2rem;
-  width: 30vw;
+#links{
+    max-width: 675px;
+    width: auto;
+    display: block;
+    margin: 36px auto 27px auto;
+}
+.link{
+    cursor: crosshair;
+    position: relative;
+    display: block;
+    background: #fe0df1;
+    background: linear-gradient(180deg, rgba(255,202,8,1) 0%, rgba(254,13,241,1) 100%);
+    color: #fff;
+    text-align: center;
+    margin-bottom: 25px;
+    padding: 17px;
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+.link:before,
+.link:after{
+    background-color: #fcdf08;
+    content: '';
+    position: absolute;
+    z-index: -1;
+}
+.link:before{
+    top: -6px;
+    left: 0;
+    height: calc(100% + 12px);
+    width: 100%;
+}
+.link:after{
+    top: 0;
+    left: -6px;
+    height: 100%;
+    width: calc(100% + 12px);
 }
 
-main .profile img {
-  width: 40%;
-  border-radius: 50%;
-  box-shadow: 10px 6px rgba(97, 126, 240, 0.671);
-  transition: all .5s ease;
-}
-
-main .profile img:hover {
-  cursor: pointer;
-  transform: translate(10px, 10px);
-  box-shadow: 0px 0px rgba(97, 126, 240, 0.671);
-}
-
-main .profile h1 {
-  font-size: 2rem;
-  font-weight: bolder;
-}
-
-a {
-  text-decoration: none;
-}
-
-a div {
-  background-color: rgb(183, 124, 238);
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 10px 10px rgb(255, 187, 109);
-  text-align: center;
-}
-
-a div:hover {
-  background-color: rgb(255, 187, 109);
-  box-shadow: 10px 10px rgb(183, 124, 238);
-}
-
-a div:hover p {
-  color: black;
-}
-
-a div img {
-  width: 2rem;
-}
-
-a div p {
-  display: inline;
-  color: white;
-  text-align: center;
-  position: relative;
-  top: -0.5rem;
-}
-
-a div:active {
-  transform: translate(10px, 10px);
-  box-shadow: 0px 0px rgb(183, 124, 238);
-}
-
-@media (max-width: 900px) {
-  main {
-    width: 80%;
-    padding: 1.5rem;
-    box-shadow: none;
-  }
-
-  main:hover {
-    transform: none;
-    box-shadow: none;
-  }
-
-  main .profile h1 {
-    font-size: 1.5rem;
-    margin-top: 2rem;
-  }
-
-  main .profile img {
-    width: 60%;
-  }
-
-  main .profile img:hover {
-    transform: none;
-    box-shadow: 10px 6px rgba(97, 126, 240, 0.671);
-  }
-
-  main div {
-    width: 70vw;
-  }
-}
-
-@media (max-width: 400px) {
-  main a div p span {
-    display: none;
-  }
-}
+.link:hover{font-size: 1.2rem;}
