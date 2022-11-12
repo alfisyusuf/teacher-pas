@@ -1,92 +1,134 @@
-.event-container {
-  font-family: "Roboto", sans-serif;
-  max-width: 800px;
-  margin: 0 auto;
-}
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap");
 
-.event-container h3.year {
-  font-size: 40px;
+html {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
   text-align: center;
-  border-bottom: 1px solid #b1b1b1;
 }
-
-.event-container .event {
-  box-shadow: 0 4px 16px -8px rgba(0, 0, 0, 0.4);
-  display: flex;
-  border-radius: 8px;
-  margin: 32px 0;
-}
-
-.event .event-left {
-  background: #222;
-  min-width: 82px;
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #eee;
-  padding: 8px 48px;
-  font-weight: bold;
-  text-align: center;
-  border-radius: 8px 0 0 8px;
+  background-image: url(Doubs.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.event .event-left .date {
-  font-size: 56px;
-}
-
-.event .event-left .month {
-  font-size: 16px;
-  font-weight: normal;
-}
-
-.event .event-right {
+main {
+  background-color: rgb(255, 255, 255);
+  padding: 3rem;
+  border-radius: 8px;
+  box-shadow: 10px 10px rgb(118, 172, 241);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 0 24px;
-}
-
-.event .event-right h3.event-title {
-  font-size: 24px;
-  margin: 24px 0 10px 0;
-  color: #218bbb;
-  text-transform: uppercase;
-}
-
-.event .event-right .event-timing {
-  background: #fff8ba;
-  display: flexbox;
   align-items: center;
   justify-content: center;
-  width: 100px;
-  padding: 8px;
-  border-radius: 16px;
-  margin: 24px 0;
-  font-size: 14px;
+  transition: all .5s ease;
 }
 
-.event .event-right .event-timing img {
-  height: 20px;
-  padding-right: 8px;
+main:hover {
+  transform: translate(10px, 10px);
+  box-shadow: 0px 0px rgb(118, 172, 241);
 }
 
-@media (max-width: 550px) {
-  .event {
-    flex-direction: column;
+main div {
+  margin-bottom: 2rem;
+  width: 30vw;
+}
+
+main .profile img {
+  width: 40%;
+  border-radius: 50%;
+  box-shadow: 10px 6px rgba(97, 126, 240, 0.671);
+  transition: all .5s ease;
+}
+
+main .profile img:hover {
+  cursor: pointer;
+  transform: translate(10px, 10px);
+  box-shadow: 0px 0px rgba(97, 126, 240, 0.671);
+}
+
+main .profile h1 {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+a {
+  text-decoration: none;
+}
+
+a div {
+  background-color: rgb(183, 124, 238);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 10px 10px rgb(255, 187, 109);
+  text-align: center;
+}
+
+a div:hover {
+  background-color: rgb(255, 187, 109);
+  box-shadow: 10px 10px rgb(183, 124, 238);
+}
+
+a div:hover p {
+  color: black;
+}
+
+a div img {
+  width: 2rem;
+}
+
+a div p {
+  display: inline;
+  color: white;
+  text-align: center;
+  position: relative;
+  top: -0.5rem;
+}
+
+a div:active {
+  transform: translate(10px, 10px);
+  box-shadow: 0px 0px rgb(183, 124, 238);
+}
+
+@media (max-width: 900px) {
+  main {
+    width: 80%;
+    padding: 1.5rem;
+    box-shadow: none;
   }
 
-  .event .event-left {
-    padding: 0;
-    border-radius: 8px 8px 0 0;
+  main:hover {
+    transform: none;
+    box-shadow: none;
   }
 
-  .event .event-left .event-date .date,
-  .event .event-left .event-date .month {
-    display: inline-block;
-    font-size: 24px;
+  main .profile h1 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
   }
 
-  .event .event-left .event-date {
-    padding: 10px 0;
+  main .profile img {
+    width: 60%;
+  }
+
+  main .profile img:hover {
+    transform: none;
+    box-shadow: 10px 6px rgba(97, 126, 240, 0.671);
+  }
+
+  main div {
+    width: 70vw;
+  }
+}
+
+@media (max-width: 400px) {
+  main a div p span {
+    display: none;
   }
 }
